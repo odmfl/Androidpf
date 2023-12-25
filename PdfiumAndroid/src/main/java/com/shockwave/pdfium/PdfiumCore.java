@@ -71,11 +71,7 @@ public class PdfiumCore {
                                                int drawSizeHor, int drawSizeVer,
                                                boolean renderAnnot);
 
-// With form support
-    private native void nativeRenderPageBitmap(long docPtr, long pagePtr, Bitmap bitmap, int dpi,
-        int startX, int startY,
-        int drawSizeHor, int drawSizeVer,
-        boolean renderAnnot);
+
 
     
     private native String nativeGetDocumentMetaText(long docPtr, String tag);
