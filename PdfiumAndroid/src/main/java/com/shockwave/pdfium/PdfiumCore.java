@@ -171,7 +171,7 @@ public class PdfiumCore {
 
     public long openText(long pagePtr) {
         synchronized (lock) {
-            return nativeLoadTextPage(pagePtr);
+            return nativeLoadTextPage(long pagePtr);
         }
     }
 
