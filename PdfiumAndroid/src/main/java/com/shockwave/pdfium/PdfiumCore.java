@@ -97,7 +97,7 @@ public class PdfiumCore {
 
     public native String nativeGetLinkTarget(long docPtr, long linkPtr);
 
-    public native long nativeLoadTextPage(long pagePtr);
+    public native long nativeLoadTextPage(long docPtr,long pagePtr);
 
     private native void nativeCloseTextPage(long pagePtr);
 
@@ -171,7 +171,7 @@ public class PdfiumCore {
 
     public long openText(long pagePtr) {
         synchronized (lock) {
-            return nativeLoadTextPage(pagePtr);
+            return nativeLoadTextPage(long docPtr,long pagePtr);
         }
     }
 
